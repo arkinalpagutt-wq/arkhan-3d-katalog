@@ -4,16 +4,15 @@ const products = window.arkhanProducts || [];
 
 const grid = document.querySelector("#productGrid");
 grid.innerHTML = products.map((product, index) => `
-  <article class="product-card" role="link" tabindex="0" data-product-url="${product.shopUrl || `https://wa.me/905465921288?text=${encodeURIComponent(`Merhaba, ${product.name} hakkında bilgi almak istiyorum.`)}`}" aria-label="${product.name} ürün sayfasını aç">
+  <a class="product-card" href="${product.shopUrl || `https://wa.me/905465921288?text=${encodeURIComponent(`Merhaba, ${product.name} hakkında bilgi almak istiyorum.`)}`}" aria-label="${product.name} ürün sayfasını aç">
     <span class="product-number">0${index + 1} / ARKHAN OBJECT</span>
-    <div class="product-art" ${product.image ? `style="background:center/cover no-repeat url('${product.image}')"` : ""}><span>${product.image ? "" : product.icon}</span></div>    <div class="product-meta"><h3>${product.name}</h3><p>${product.description}</p>${product.price ? `<strong class="product-price">${product.price}</strong>` : ""}</div>    <a class="card-arrow" href="${product.shopUrl || `https://wa.me/905465921288?text=${encodeURIComponent(`Merhaba, ${product.name} hakkında bilgi almak istiyorum.`)}`}" target="_blank" rel="noreferrer" aria-label="${product.name} ürün sayfasını aç">↗</a>
-  </article>`).join("");
+    <div class="product-art" ${product.image ? `style="background:center/cover no-repeat url('${product.image}')"` : ""}><span>${product.image ? "" : product.icon}</span></div>    <div class="product-meta"><h3>${product.name}</h3><p>${product.description}</p>${product.price ? `<strong class="product-price">${product.price}</strong>` : ""}</div>    <span class="card-arrow" aria-hidden="true">↗</span>
+  </a>`).join("");
 
 // Kartın boş alanına dokununca ilgili Shopier ürün sayfasını aç.
 grid.querySelectorAll(".product-card").forEach(card => {
   const openProduct = () => window.location.href = card.dataset.productUrl;
   card.addEventListener("click", event => { if (!event.target.closest("a")) openProduct(); });
-  card.addEventListener("keydown", event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openProduct(); } });
 });
 
 const qrTarget = document.querySelector("#qrUrl");
