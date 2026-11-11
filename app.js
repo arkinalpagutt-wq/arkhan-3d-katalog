@@ -1,21 +1,12 @@
-// Ürünleri burada düzenleyin. Fotoğraf için image alanına yerel dosya yolu yazın (örn. images/isimlik.jpg).
-const products = [
-  { name: "Kişiye Özel İsimlikler", description: "İsminizi ve tarzınızı taşıyan, size özel masaüstü tasarımları.", icon: "✧", image: "" },
-  { name: "Thug Life Gözlük", description: "Eğlenceli anlara ikonik bir dokunuş. Hafif, dikkat çekici.", icon: "◉", image: "" },
-  { name: "Spin Ball", description: "Hareketi sevenlere elde çevirmelik, tatmin edici bir form.", icon: "◌", image: "" },
-  { name: "GTA VI Logo", description: "Oyun kültüründen ilham alan koleksiyonluk dekor ürünü.", icon: "VI", image: "" },
-  { name: "Beşiktaş Temalı Ürünler", description: "Siyah beyaz sevdaya özel, taraftar ruhunu yansıtan parçalar.", icon: "✦", image: "" },
-  { name: "Özel Tasarım 3D Baskılar", description: "Aklınızdaki fikirden ölçüsüne göre üretilen özgün parçalar.", icon: "⬡", image: "" },
-  { name: "Anahtarlıklar", description: "Günlük kullanım için kişiselleştirilebilir küçük tasarımlar.", icon: "⌘", image: "" }
-];
+// Ürün listesi products.js dosyasından yüklenir.
+const products = window.arkhanProducts || [];
+
 
 const grid = document.querySelector("#productGrid");
 grid.innerHTML = products.map((product, index) => `
   <article class="product-card">
     <span class="product-number">0${index + 1} / ARKHAN OBJECT</span>
-    <div class="product-art" ${product.image ? `style="background:center/cover no-repeat url('${product.image}')"` : ""}><span>${product.image ? "" : product.icon}</span></div>
-    <div class="product-meta"><h3>${product.name}</h3><p>${product.description}</p></div>
-    <a class="card-arrow" href="https://wa.me/905465921288?text=${encodeURIComponent(`Merhaba, ${product.name} hakkında bilgi almak istiyorum.`)}" target="_blank" rel="noreferrer" aria-label="${product.name} hakkında WhatsApp'tan bilgi al">↗</a>
+    <div class="product-art" ${product.image ? `style="background:center/cover no-repeat url('${product.image}')"` : ""}><span>${product.image ? "" : product.icon}</span></div>    <div class="product-meta"><h3>${product.name}</h3><p>${product.description}</p>${product.price ? `<strong class="product-price">${product.price}</strong>` : ""}</div>    <a class="card-arrow" href="${product.shopUrl || `https://wa.me/905465921288?text=${encodeURIComponent(`Merhaba, ${product.name} hakkında bilgi almak istiyorum.`)}`}" target="_blank" rel="noreferrer" aria-label="${product.name} ürün sayfasını aç">↗</a>
   </article>`).join("");
 
 const qrTarget = document.querySelector("#qrUrl");
