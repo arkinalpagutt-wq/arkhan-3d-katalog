@@ -11,7 +11,7 @@ grid.innerHTML = products.map((product, index) => `
 
 // Kartın boş alanına dokununca ilgili Shopier ürün sayfasını aç.
 grid.querySelectorAll(".product-card").forEach(card => {
-  const openProduct = () => window.open(card.dataset.productUrl, "_blank", "noopener,noreferrer");
+  const openProduct = () => window.location.href = card.dataset.productUrl;
   card.addEventListener("click", event => { if (!event.target.closest("a")) openProduct(); });
   card.addEventListener("keydown", event => { if (event.key === "Enter" || event.key === " ") { event.preventDefault(); openProduct(); } });
 });
