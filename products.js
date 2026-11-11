@@ -1,4 +1,4 @@
-// Mağazada görünen 24 ürün. İsim, fiyat, açıklama ve görsel buradan düzenlenir.
+// Mağazada görünen 31 ürün. İsim, fiyat, açıklama ve görsel buradan düzenlenir.
 window.arkhanProducts = [
   { name: "Spin ball", description: "Elde çevirmelik, hareketli masaüstü oyuncağı.", price: "250 TL", icon: "◌", image: "01-spin-ball.jpeg", shopUrl: "https://www.shopier.com/arkhan/50697066" },
   { name: "Beşiktaş Temalı Şehir Tabelası Dekor – 3D Baskı Duvar Panosu", description: "Siyah beyaz şehir tabelası tasarımlı, hafif PLA duvar dekoru.", price: "125 TL", icon: "✦", image: "02-besiktas-sehir-tabelasi.jpeg", shopUrl: "https://www.shopier.com/arkhan/49310759" },
@@ -23,5 +23,20 @@ window.arkhanProducts = [
   { name: "İplik Kukla Heykeli – Modern Masaüstü Dekoru", description: "İplerle dengede duran kukla figürlü masaüstü dekoru.", price: "200 TL", icon: "♙", image: "21-iplik-kukla.jpeg", shopUrl: "https://www.shopier.com/arkhan/49254299" },
   { name: "GTA VI Logosu", description: "Oyun kültüründen ilham alan koleksiyonluk 3D logo.", price: "250 TL", icon: "VI", image: "22-gta-vi.jpeg", shopUrl: "https://www.shopier.com/arkhan/49250340" },
   { name: "İlk Merhaba | 3D Duvar Dekoru", description: "Duvarlarda sergilenmek üzere tasarlanmış 3D dekor.", price: "100 TL", icon: "✧", image: "23-ilk-merhaba.jpeg", shopUrl: "https://www.shopier.com/arkhan/49250261" },
-  { name: "Kişiye Özel İsim Levhası – Düz Yüzey Tasarım", description: "Kişiye özel isimle hazırlanan sade tasarımlı isim levhası.", price: "100 TL", icon: "A", image: "24-isim-levhasi.jpeg", shopUrl: "https://www.shopier.com/arkhan/49250086" }
+  { name: "Kişiye Özel İsim Levhası – Düz Yüzey Tasarım", description: "Kişiye özel isimle hazırlanan sade tasarımlı isim levhası.", price: "100 TL", icon: "A", image: "24-isim-levhasi.jpeg", shopUrl: "https://www.shopier.com/arkhan/49250086" },
+  { name: "Uçak Koltuk Masası Tablet ve Telefon Tutucu", description: "Taşınabilir, iki boy seçenekli tablet ve telefon tutucu. Tasarım: howdyhohoho · MakerWorld fotoğrafı.", price: "199 TL", icon: "▱", image: "makerworld-airplane-holder.webp", shopUrl: "https://www.shopier.com/arkhan/52836954" },
+  { name: "Şişme Mont Tasarımlı Kalemlik", description: "Mont formundan ilham alan dokulu masaüstü kalemlik. Tasarım: Sitsero · MakerWorld fotoğrafı.", price: "199 TL", icon: "▤", image: "makerworld-puffer-pencil-holder.webp", shopUrl: "https://www.shopier.com/arkhan/52836969" },
+  { name: "Kişiye Özel Kartvizit Standı", description: "Masaüstünde kartvizitleri düzenli tutan kişiselleştirilebilir stand. Tasarım: CrazyModding · MakerWorld fotoğrafı.", price: "129 TL", icon: "▰", image: "makerworld-business-card-stand.png", shopUrl: "https://www.shopier.com/arkhan/52837020" },
+  { name: "Dev Kurşun Kalem Organizer", description: "Kalem ve masa araçları için çok renkli basılabilen büyük organizer. Tasarım: Purr Prints 3D · MakerWorld fotoğrafı.", price: "199 TL", icon: "✎", image: "makerworld-giant-pencil-organizer.png", shopUrl: "https://www.shopier.com/arkhan/52837045" },
+  { name: "Eklemli Ahtapot Masaüstü Oyuncağı", description: "Baskı yerinde hareketli, desteksiz eklemli ahtapot. Tasarım: Timmy_1293 / MTD3d · MakerWorld fotoğrafı.", price: "149 TL", icon: "🐙", image: "makerworld-articulated-octopus.png", shopUrl: "https://www.shopier.com/arkhan/52837061" },
+  { name: "Spiral Twist Hareketli Fidget", description: "Elde çevrilince spiral formdan helise dönüşen tek parça fidget. Tasarım: Nerdherderz · MakerWorld fotoğrafı.", price: "149 TL", icon: "◉", image: "makerworld-spiral-twist-fidget.png", shopUrl: "https://www.shopier.com/arkhan/52837066" },
+  { name: "Kişiye Özel İsim Etiketi", description: "Sipariş notundaki isimle hazırlanan özel baskı etiket. Tasarım: Ryno_man · MakerWorld fotoğrafı.", price: "99 TL", icon: "A", image: "makerworld-custom-name-tag.webp", shopUrl: "https://www.shopier.com/arkhan/52837077" }
 ];
+
+
+
+
+
+
+
+
